@@ -80,9 +80,9 @@ class TheNewViewController: UIViewController {
     }
 
     @objc func makeNewAgain() {
-        let alert = UIAlertController(title: "Are you sure?", message: "Being on top of things has a price so making it new has a price too. Make it new for just 10$!", preferredStyle: .alert)
-        let noAction = UIAlertAction(title: "No", style: .destructive, handler: nil)
-        let yesAction = UIAlertAction(title: "Yes!", style: .default) { _ in
+        let alert = UIAlertController(title: "Don’t lag behind!", message: "Make the app new again for the net new price of 10$.", preferredStyle: .alert)
+        let noAction = UIAlertAction(title: "No, I’ll stay lame", style: .destructive, handler: nil)
+        let yesAction = UIAlertAction(title: "Yes, now!", style: .default) { _ in
             self.makeNew()
             self.playSound()
         }
