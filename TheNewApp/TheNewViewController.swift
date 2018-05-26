@@ -14,7 +14,14 @@ class TheNewViewController: UIViewController {
     var player: AVAudioPlayer?
 
     lazy var imageView: UIImageView = {
-        let view = UIImageView(image: UIImage(named: "old2")!)
+        let view = UIImageView(image: UIImage(named: "fingers")!)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.alpha = 0
+        return view
+    }()
+
+    lazy var shineImageView: UIImageView = {
+        let view = UIImageView(image: UIImage(named: "shine")!)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.alpha = 0
         return view
@@ -40,6 +47,7 @@ class TheNewViewController: UIViewController {
         view.backgroundColor = .white
 
         view.addSubview(imageView)
+        view.addSubview(shineImageView)
         view.addSubview(makeNewButton)
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -47,10 +55,15 @@ class TheNewViewController: UIViewController {
             imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 
+            shineImageView.topAnchor.constraint(equalTo: view.topAnchor),
+            shineImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            shineImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            shineImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+
             makeNewButton.widthAnchor.constraint(equalToConstant: 240),
             makeNewButton.heightAnchor.constraint(equalToConstant: 50),
             makeNewButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            makeNewButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            makeNewButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30),
             ])
     }
 
@@ -73,8 +86,10 @@ class TheNewViewController: UIViewController {
     func makeNew() {
         UIView.animate(withDuration: 2, animations: {
             self.imageView.alpha = 0
+            self.shineImageView.alpha = 1
             self.makeNewButton.alpha = 0
         }) { (_) in
+            self.shineImageView.alpha = 0
             self.makeOld()
         }
     }
@@ -86,8 +101,8 @@ class TheNewViewController: UIViewController {
             self.makeNew()
             self.playSound()
         }
-        alert.addAction(noAction)
         alert.addAction(yesAction)
+        alert.addAction(noAction)
         alert.preferredAction = yesAction
         present(alert, animated: true, completion: nil)
     }
