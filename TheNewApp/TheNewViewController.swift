@@ -63,7 +63,7 @@ class TheNewViewController: UIViewController {
             makeNewButton.widthAnchor.constraint(equalToConstant: 240),
             makeNewButton.heightAnchor.constraint(equalToConstant: 50),
             makeNewButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            makeNewButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30),
+            makeNewButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
             ])
     }
 
