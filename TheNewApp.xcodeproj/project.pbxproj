@@ -11,6 +11,7 @@
 		4469841D20B9662600306DB5 /* TheNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4469841C20B9662600306DB5 /* TheNewViewController.swift */; };
 		4469842220B9662600306DB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4469842120B9662600306DB5 /* Assets.xcassets */; };
 		4469842520B9662600306DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4469842320B9662600306DB5 /* LaunchScreen.storyboard */; };
+		448EAFDD20B985E4005F0625 /* chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 448EAFDC20B985E4005F0625 /* chime.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		4469842120B9662600306DB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4469842420B9662600306DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4469842620B9662600306DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		448EAFDC20B985E4005F0625 /* chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chime.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				4469841A20B9662600306DB5 /* AppDelegate.swift */,
 				4469841C20B9662600306DB5 /* TheNewViewController.swift */,
+				448EAFDC20B985E4005F0625 /* chime.mp3 */,
 				4469842120B9662600306DB5 /* Assets.xcassets */,
 				4469842320B9662600306DB5 /* LaunchScreen.storyboard */,
 				4469842620B9662600306DB5 /* Info.plist */,
@@ -119,6 +122,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				448EAFDD20B985E4005F0625 /* chime.mp3 in Resources */,
 				4469842520B9662600306DB5 /* LaunchScreen.storyboard in Resources */,
 				4469842220B9662600306DB5 /* Assets.xcassets in Resources */,
 			);
